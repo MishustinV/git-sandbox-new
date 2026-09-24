@@ -13,6 +13,11 @@ double pyramidVolume(double a, double h) {
     return a * a * h / 3.0;
 }
 
+// Апофема: m = sqrt(h^2 + (a/2)^2)
+double pyramidApothem(double a, double h) {
+    return sqrt(h * h + (a / 2.0) * (a / 2.0));
+}
+
 // ===== Главная функция: меню =====
 int main() {
     int choice;
@@ -21,6 +26,7 @@ int main() {
     do {
         cout << "\n== Вариант 20: расчёты для пирамиды ==\n";
         cout << "1. Объём пирамиды\n";
+	cout << "2. Апофема пирамиды\n";
         cout << "0. Выход\n";
         cout << "Выберите пункт: ";
         cin >> choice;
@@ -42,7 +48,15 @@ int main() {
             }
             cout << "Объём = " << pyramidVolume(a, h) << "\n";
             break;
-
+	case 2:
+    	    cout << "Введите сторону основания a и высоту h: ";
+            cin >> a >> h;
+            if (a <= 0 || h <= 0) {
+        	cout << "Ошибка: a и h должны быть положительными.\n";
+        	break;
+    	    }
+    	    cout << "Апофема = " << pyramidApothem(a, h) << "\n";
+            break;
         case 0:
             cout << "Работа завершена.\n";
             break;
