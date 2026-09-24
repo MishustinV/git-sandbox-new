@@ -46,7 +46,7 @@ int main() {
                 cout << "Ошибка: a и h должны быть положительными.\n";
                 break;
             }
-            cout << "Объём = " << pyramidVolume(a, h) << "\n";
+            cout << "Объём = " << pyramidVolume(a, h) << "куб. ед.\n";
             break;
 	case 2:
     	    cout << "Введите сторону основания a и высоту h: ";
@@ -55,7 +55,7 @@ int main() {
         	cout << "Ошибка: a и h должны быть положительными.\n";
         	break;
     	    }
-    	    cout << "Апофема = " << pyramidApothem(a, h) << "\n";
+    	    cout << "Апофема = " << pyramidApothem(a, h) << " ед.\n";
             break;
         case 0:
             cout << "Работа завершена.\n";
